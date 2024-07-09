@@ -29,5 +29,12 @@ public class FeatureController {
         return "hi";
 
     }
+    @GetMapping("/donation2")
+    public String noCheck(){
 
+        LOGGER.info("hi donation");
+
+        return "hi";
+
+    }
 }
