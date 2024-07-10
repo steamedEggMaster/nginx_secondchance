@@ -94,6 +94,7 @@ public class SecurityConfig {
                         .requestMatchers("/oauth2/**").permitAll()
                         .requestMatchers("/swagger/**", "/v3/**").permitAll()
                         .requestMatchers("/v1/feature/**").hasRole("USER")
+                        .requestMatchers("feature/**").permitAll()
                         .anyRequest().authenticated());
         //세션 설정 : STATELESS
         httpSecurity
